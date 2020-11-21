@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.min.css">  
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<body>
+  <section class="card">
+    <div class="card__image">
+      <picture>
+        <source media="(min-width:1000px" srcset="images/illustration-woman-online-desktop.svg">
+        <img src="images/illustration-woman-online-mobile.svg" alt="woman illustration" class="woman__illustration">
+      </picture>
+    </div>
+    <div class="card__accordion">
+      <div class="accordion">
+        <h1 class="accordion__heading">FAQ</h1>
+        <div class="accordion__elements">
+          <div class="accordion__element">
+            <div class="accordion__element--title">
+              <p class="accordion__question change">
+                How many team members can I invite?
+              </p>
+              <img src="images/icon-arrow-down.svg" alt="arrow" class="accordion__arrow change">
+            </div>
+            <p class="accordion__answer change">
+              You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+            </p>
+          </div>
+
+
+
+          <div class="accordion__element">
+            <div class="accordion__element--title">
+              <p class="accordion__question change">
+                What is the maximum file upload size?
+              </p>
+              <img src="images/icon-arrow-down.svg" alt="arrow" class="accordion__arrow change">
+            </div>
+            <p class="accordion__answer change">
+              No more than 2GB. All files in your account must fit your allotted storage space.
+            </p>
+          </div>
+
+
+
+          <div class="accordion__element">
+            <div class="accordion__element--title">
+              <p class="accordion__question change">
+                How do I reset my password?
+              </p>
+              <img src="images/icon-arrow-down.svg" alt="arrow" class="accordion__arrow change">
+            </div>
+            <p class="accordion__answer change">
+              Click “Forgot password” from the login page or “Change password” from your profile page.
+              A reset link will be emailed to you.
+            </p>
+          </div>
+
+
+
+
+          <div class="accordion__element">
+            <div class="accordion__element--title">
+              <p class="accordion__question change">
+                Can I cancel my subscription?
+              </p>
+              <img src="images/icon-arrow-down.svg" alt="arrow" class="accordion__arrow change">
+            </div>
+            <p class="accordion__answer change">
+              Yes! Send us a message and we’ll process your request no questions asked.
+            </p>
+          </div>
+
+
+
+
+          <div class="accordion__element">
+            <div class="accordion__element--title">
+              <p class="accordion__question change">
+                Do you provide additional support?
+              </p>
+              <img src="images/icon-arrow-down.svg" alt="arrow" class="accordion__arrow change">
+            </div>
+            <p class="accordion__answer change">
+              Chat and email support is available 24/7. Phone lines are open during normal business hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- section
+  How many team members can I invite?
+  You can invite up to 2 additional users on the Free plan. There is no limit on 
+  team members for the Premium plan.
+
+  What is the maximum file upload size?
+  No more than 2GB. All files in your account must fit your allotted storage space.
+
+  How do I reset my password?
+  Click “Forgot password” from the login page or “Change password” from your profile page.
+  A reset link will be emailed to you.
+
+  Can I cancel my subscription?
+  Yes! Send us a message and we’ll process your request no questions asked.
+
+  Do you provide additional support?
+  Chat and email support is available 24/7. Phone lines are open during normal business hours. -->
+  <script>
+    const question = document.getElementsByClassName('accordion__element--title');
+    const activeElement = document.querySelectorAll('.change');
+
+    for (i=0; i<question.length; i++){
+      question[i].addEventListener('click',function(){
+        for(a=0; a<activeElement.length; a++){
+          activeElement[a].classList.toggle('is-open')
+        }
+      })
+    }
+    // question.addEventListener('click', function(){
+    //     console.log('dziala');
+    
+        // for (let i=0; i<activeElement.lenght; i++){
+        //     activeElement[i].classList.toggle('is-open')
+    //     }
+    // })
+    
+    </script>
+</body>
+</html>
